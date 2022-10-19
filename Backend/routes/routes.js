@@ -8,5 +8,6 @@ router.get('/',home)
 
 //register route
 router.post('/register', register)
+router.post('/login', login)
 
 module.exports = router;
