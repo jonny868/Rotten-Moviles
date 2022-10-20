@@ -62,4 +62,24 @@ ctrl.dashboard = async (req, res) => {
     },
   ]);
 };
+
+ctrl.profile = (req,res)=>{
+  res.send(req.userId)
+}
+
+ctrl.verifyToken = (req, res, next)  => {
+  if(!req.headers.authorization){
+    return res.status(401).send('Authorization Required')
+  }
+  const token = req.headers.authorization.split(' ')[1]
+  if(token ==='null'){
+    return res.status(401).send('Authorization Required')
+  }
+  //payload : data that can be passed trough different requests
+  const data = jwt.verify(token, SECRET_KEY)
+  req.userId = data._id;
+  next();
+  console.log(data)
+}
+
 module.exports = ctrl;
