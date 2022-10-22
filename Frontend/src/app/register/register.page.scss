@@ -1,0 +1,31 @@
+ion-content {
+    --background: url(../../assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg) 0 0/100% 100% no-repeat;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ion-card {
+    padding: 3rem 0;
+    background-color: #000;
+    opacity: 0.9;
+    width: 90%;
+    height: 70%;
+  }
+  ion-title {
+    margin:0 0 2rem 0;
+    text-align: center;
+  }
+  
+  .actions {
+    margin: 2rem 0;
+    display:  flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }

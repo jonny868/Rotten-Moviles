@@ -1,5 +1,29 @@
 <ion-content [fullscreen]="true">
   <div class="container">
-    <img class="logo" src="../../assets/images/Rotten App-logos.jpeg" alt="">
+
+    <ion-card>
+      <ion-img [src]="img"></ion-img>
+      
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input placeholder="johndoe@email.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input placeholder="123456"></ion-input>
+      </ion-item>
+      <div class="actions">
+  
+        <ion-button color="dark" expand="block" fill="outline" shape="default">
+          Login
+        </ion-button>
+        <ion-button (click)="navigate()" color="dark" expand="block" fill="outline" shape="default">
+          Register
+        </ion-button>
+      </div>
+      <ion-button color="dark" expand="block" fill="clear" shape="round">
+        Continue as a Guest
+      </ion-button>
+    </ion-card>
   </div>
 </ion-content>
