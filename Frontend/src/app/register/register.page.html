@@ -6,24 +6,24 @@
       <ion-title color="dark">JOIN OUR COMUNITY!</ion-title>
       <ion-item>
         <ion-label position="floating">Username</ion-label>
-        <ion-input type="text" placeholder="JohnDoe"></ion-input>
+        <ion-input [(ngModel)]="user.username" type="text" placeholder="JohnDoe"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" placeholder="johndoe@email.com"></ion-input>
+        <ion-input [(ngModel)]="user.email" type="email" placeholder="johndoe@email.com"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" placeholder="123456"></ion-input>
+        <ion-input [(ngModel)]="user.password" type="password" placeholder="123456"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Confirm Password</ion-label>
-        <ion-input type="password" placeholder="123456"></ion-input>
+        <ion-input [(ngModel)]="checkpw" type="password" placeholder="123456"></ion-input>
       </ion-item>
       <div class="actions">
   
        
-        <ion-button color="dark" expand="block" fill="outline" shape="default">
+        <ion-button (click)="signUp()" color="dark" expand="block" fill="outline" shape="default">
           Register
         </ion-button>
         <ion-buttons color="dark" fill="outline" slot="center">

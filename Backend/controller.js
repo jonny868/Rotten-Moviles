@@ -35,8 +35,8 @@ ctrl.register = async (req, res) => {
 
 //login --> completo, falta añadir validaciones
 ctrl.login = async (req, res) => {
-  const { username, password } = req.body;
-  const user = await User.findOne({ username });
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
   if (!user) return res.status(401).send("Email or Password Incorrect");
   if (user.password !== password)
     return res.status(401).send("Email or Password Incorrect");

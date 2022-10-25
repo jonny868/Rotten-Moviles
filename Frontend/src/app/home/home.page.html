@@ -6,18 +6,18 @@
       
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input placeholder="johndoe@email.com"></ion-input>
+        <ion-input [(ngModel)]="user.email" type="email" placeholder="johndoe@email.com" name="email"required="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input placeholder="123456"></ion-input>
+        <ion-input [(ngModel)]="user.password" placeholder="123456" name="password" type="password" required="true"></ion-input>
       </ion-item>
       <div class="actions">
   
-        <ion-button color="dark" expand="block" fill="outline" shape="default">
+        <ion-button (click)="signin()" color="dark" expand="block" fill="outline" shape="default">
           Login
         </ion-button>
-        <ion-button (click)="navigate()" color="dark" expand="block" fill="outline" shape="default">
+        <ion-button (click)="goToRegister()" color="dark" expand="block" fill="outline" shape="default">
           Register
         </ion-button>
       </div>
