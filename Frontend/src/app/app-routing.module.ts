@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AuthGuard } from './auth-guard.guard';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -21,11 +22,23 @@ const routes: Routes = [
   },
   {
     path: 'movies/:id',
-    loadChildren: () => import('./movies/movies.module').then( m => m.MoviesPageModule)
+    loadChildren: () => import('./movies/movies.module').then( m => m.MoviesPageModule),
+    canActivate:[AuthGuard],
   },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule),
+    canActivate:[AuthGuard],
+  },
+  {
+    path: 'comments',
+    loadChildren: () => import('./comments/comments.module').then( m => m.CommentsPageModule),
+    canActivate:[AuthGuard],
+  },
+  {
+    path: 'favorites',
+    loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesPageModule),
+    canActivate:[AuthGuard],
   },
 ];
 

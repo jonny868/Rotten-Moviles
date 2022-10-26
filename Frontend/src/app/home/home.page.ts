@@ -15,7 +15,7 @@ export class HomePage {
     email: '',
     password: '',
   };
-  constructor(private router: Router, private authService: AuthService, private toastController: ToastController ) {}
+  constructor(private router: Router, public authService: AuthService, private toastController: ToastController ) {}
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Username or password incorrect',
@@ -36,6 +36,7 @@ export class HomePage {
     return this.authService.logInUser(this.user).subscribe(
       (res) => {
         console.log(res);
+        localStorage.setItem('token', res.token);
         this.router.navigate(['/dashboard']);
       },
       (err) => {
