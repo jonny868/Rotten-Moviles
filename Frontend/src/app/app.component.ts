@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router) {}
 
-  navigate(path){
-    this.router.navigate([path]);
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/home']);
   }
 }

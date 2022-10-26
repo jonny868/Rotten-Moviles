@@ -12,13 +12,13 @@
   </ion-toolbar>
   <ion-content>
     <div class="btn-container">
-      <ion-button routerLinkActive="active" color="dark" expand="block" fill="outline" shape="default">
+      <ion-button [routerLink]="['/dashboard']" routerLinkActive="active" color="dark" expand="block" fill="outline" shape="default">
         <ion-icon slot="start" name="tv-outline"></ion-icon>
         Dashboard
       </ion-button>
     </div>
     <div class="btn-container">
-      <ion-button color="dark" expand="block" fill="outline" shape="default">
+      <ion-button [routerLink]="['/favorites']" color="dark" expand="block" fill="outline" shape="default">
         <ion-icon slot="start" name="star"></ion-icon>
         Favorites
       </ion-button>
@@ -30,35 +30,26 @@
       </ion-button>
     </div>
     <div class="btn-container">
-      <ion-button color="dark" expand="block" fill="outline" shape="default">
+      <ion-button [routerLink]="['/profile']" routerLinkActive="router-link-active"  color="dark" expand="block" fill="outline" shape="default">
         <ion-icon slot="start" name="person-outline"></ion-icon>
         Profile
       </ion-button>
     </div>
-    <ion-footer>
-      <div class="btn-container">
-        <ion-button color="dark" expand="block" fill="outline" shape="default">
-          <ion-icon slot="start" name="log-out-outline"></ion-icon>
-          Logout
-        </ion-button>
-      </div>
-    </ion-footer>
+      <ng-container *ngIf="authService.logged();else logged">
+        <div class="btn-container">
+          <ion-button (click)="logout()" color="dark" expand="block" fill="outline" shape="default">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            Logout
+          </ion-button>
+        </div>
+      </ng-container>
+      <ng-template #logged>
+        <div class="btn-container">
+          <ion-button (click)="logout()" color="dark" expand="block" fill="outline" shape="default">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            Login
+          </ion-button>
+        </div>
+      </ng-template>
   </ion-content>
 </ion-menu>
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-
-    <ion-card>
-      
-    </ion-card>
-   
-  </ion-content>
-</div>

@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { DisplayService } from '../services/display.service';
 
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -12,20 +11,26 @@ import { DisplayService } from '../services/display.service';
 })
 export class DashboardPage implements OnInit {
   public movies = [];
+  name = '';
 
-  constructor(private router: Router, http: HttpClient, public authService: AuthService, public moviesDisplay: DisplayService) { }
+  constructor(
+    private router: Router,
+    public authService: AuthService,
+    public moviesDisplay: DisplayService
+  ) {}
 
   ngOnInit() {
-    this.moviesDisplay.getMovies().subscribe(res=>{
+    this.moviesDisplay.getMovies().subscribe((res) => {
       console.log(res);
       this.movies = res.results;
     });
-
   }
 
-  logout(){
+  logout() {
     localStorage.clear();
     this.router.navigate(['/home']);
   }
-
+  search(name) {
+    this.router.navigate(['/search'], name);
   }
+}

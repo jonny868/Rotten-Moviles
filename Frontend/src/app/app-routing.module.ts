@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesPageModule),
     canActivate:[AuthGuard],
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
 ];
 
 @NgModule({

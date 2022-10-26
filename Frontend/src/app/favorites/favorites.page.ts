@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-favorites',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesPage implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/home']);
+  }
 }
