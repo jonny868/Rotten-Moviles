@@ -100,10 +100,18 @@
   </ion-header>
   <ion-content class="ion-padding">
     <ion-card *ngFor="let movie of movies">
-      <img
-        alt="{{movie.title}}"
-        src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}"
-      />
+      <ng-container *ngIf="movie.backdrop_path; else defaultImg">
+        <img
+          alt="{{movie.title}}"
+          src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}"
+        />
+      </ng-container>
+      <ng-template #defaultImg>
+        <img
+          alt="{{movie.title}}"
+          src="https://its.fsu.edu/sites/g/files/upcbnu1011/files/ITS%20Website/no-image-available.png"
+        />
+      </ng-template>
       <ion-card-header>
         <ion-card-title>{{movie.title}}</ion-card-title>
         <ion-card-subtitle>Suspense</ion-card-subtitle>

@@ -1,256 +1,425 @@
 {
-    "movies":[
-        {
-            "id":0,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":1,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":2,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":3,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":4,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":5,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":6,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":7,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":8,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":9,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":10,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":11,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":12,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":13,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":14,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":15,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":16,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":17,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":18,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":19,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":20,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":21,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":22,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":23,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":0,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":0,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":0,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        },
-        {
-            "id":0,
-            "name":"Jurassic World",
-            "image":"url",
-            "description":"lorem ipsum dolor sit amet, consectetur adipiscing",
-            "comments":[],
-            "popularity":34,
-            "rates":[]
-        }
-    ]
-}
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/d6MhreFdMHONqX3iZlJGCF8UkIt.jpg",
+        "id": 436270,
+        "title": "Black Adam",
+        "original_language": "en",
+        "original_title": "Black Adam",
+        "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+        "poster_path": "/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          12,
+          14
+        ],
+        "popularity": 4912.22,
+        "release_date": "2022-10-19",
+        "video": false,
+        "vote_average": 7.2,
+        "vote_count": 479
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/aTovumsNlDjof7YVoU5nW2RHaYn.jpg",
+        "id": 616820,
+        "title": "Halloween Ends",
+        "original_language": "en",
+        "original_title": "Halloween Ends",
+        "overview": "Four years after the events of Halloween in 2018, Laurie has decided to liberate herself from fear and rage and embrace life. But when a young man is accused of killing a boy he was babysitting, it ignites a cascade of violence and terror that will force Laurie to finally confront the evil she can’t control, once and for all.",
+        "poster_path": "/kFMntvUmKhvw1uAHXecqqNSFXt.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          27,
+          53
+        ],
+        "popularity": 2843.127,
+        "release_date": "2022-10-12",
+        "video": false,
+        "vote_average": 6.667,
+        "vote_count": 675
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/tSxbUnrnWlR5dQvUgqMI7sACmFD.jpg",
+        "id": 779782,
+        "title": "The School for Good and Evil",
+        "original_language": "en",
+        "original_title": "The School for Good and Evil",
+        "overview": "Best friends Sophie and Agatha navigate an enchanted school for young heroes and villains — and find themselves on opposing sides of the battle between good and evil.",
+        "poster_path": "/6oZeEu1GDILdwezmZ5e2xWISf1C.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          14,
+          28,
+          18
+        ],
+        "popularity": 695.653,
+        "release_date": "2022-10-19",
+        "video": false,
+        "vote_average": 7.456,
+        "vote_count": 318
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/zt6sKnx9dEiRCb7oVMlfmmMGJMO.jpg",
+        "id": 718930,
+        "title": "Bullet Train",
+        "original_language": "en",
+        "original_title": "Bullet Train",
+        "overview": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.",
+        "poster_path": "/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          35,
+          53
+        ],
+        "popularity": 1982.495,
+        "release_date": "2022-07-03",
+        "video": false,
+        "vote_average": 7.517,
+        "vote_count": 2003
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/4O9kFXsBjlxtgzXWHfgMS9CjhbN.jpg",
+        "id": 619730,
+        "title": "Don't Worry Darling",
+        "original_language": "en",
+        "original_title": "Don't Worry Darling",
+        "overview": "Alice and Jack are lucky to be living in the idealized community of Victory, the experimental company town housing the men who work for the top-secret Victory Project and their families. But when cracks in their idyllic life begin to appear, exposing flashes of something much more sinister lurking beneath the attractive façade, Alice can’t help questioning exactly what they’re doing in Victory, and why.",
+        "poster_path": "/9BXYLjXtSipBp2GfAlsri4i8hPC.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          53,
+          9648,
+          18
+        ],
+        "popularity": 358.866,
+        "release_date": "2022-09-21",
+        "video": false,
+        "vote_average": 6.9,
+        "vote_count": 530
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/pfAZP7JvTTxqgq7n6A1OYgkAdEW.jpg",
+        "id": 894205,
+        "title": "Werewolf by Night",
+        "original_language": "en",
+        "original_title": "Werewolf by Night",
+        "overview": "On a dark and somber night, a secret cabal of monster hunters emerge from the shadows and gather at the foreboding Bloodstone Temple following the death of their leader. In a strange and macabre memorial to the leader’s life, the attendees are thrust into a mysterious and deadly competition for a powerful relic—a hunt that will ultimately bring them face to face with a dangerous monster.",
+        "poster_path": "/jmv7EbqBuEk4V1U7OoSBaxkwawO.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          14,
+          27,
+          10770
+        ],
+        "popularity": 671.082,
+        "release_date": "2022-09-25",
+        "video": false,
+        "vote_average": 7.208,
+        "vote_count": 517
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg",
+        "id": 361743,
+        "title": "Top Gun: Maverick",
+        "original_language": "en",
+        "original_title": "Top Gun: Maverick",
+        "overview": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+        "poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          18
+        ],
+        "popularity": 927.083,
+        "release_date": "2022-05-24",
+        "video": false,
+        "vote_average": 8.35,
+        "vote_count": 4431
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/bUjPcNS8GweBh5Nxp8oq9Dy712Z.jpg",
+        "id": 913290,
+        "title": "Barbarian",
+        "original_language": "en",
+        "original_title": "Barbarian",
+        "overview": "In town for a job interview, a young woman arrives at her Airbnb late at night only to find that it has been mistakenly double-booked and a strange man is already staying there. Against her better judgement, she decides to stay the night anyway, but soon discovers that there is much more to be afraid of in the house than the other guest.",
+        "poster_path": "/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          27,
+          9648,
+          53
+        ],
+        "popularity": 192.311,
+        "release_date": "2022-09-08",
+        "video": false,
+        "vote_average": 7.174,
+        "vote_count": 115
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ulyR4pWVMRtVcanoassVbmgfEPT.jpg",
+        "id": 800939,
+        "title": "Ticket to Paradise",
+        "original_language": "en",
+        "original_title": "Ticket to Paradise",
+        "overview": "A divorced couple teams up and travels to Bali to stop their daughter from making the same mistake they think they made 25 years ago.",
+        "poster_path": "/1tzERH50P5c2mFWtLbgixzLZS1L.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          35,
+          10749
+        ],
+        "popularity": 300.032,
+        "release_date": "2022-09-08",
+        "video": false,
+        "vote_average": 6.748,
+        "vote_count": 135
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg",
+        "id": 616037,
+        "title": "Thor: Love and Thunder",
+        "original_language": "en",
+        "original_title": "Thor: Love and Thunder",
+        "overview": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+        "poster_path": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          14,
+          28,
+          35
+        ],
+        "popularity": 1194.017,
+        "release_date": "2022-07-06",
+        "video": false,
+        "vote_average": 6.732,
+        "vote_count": 4388
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+        "id": 634649,
+        "title": "Spider-Man: No Way Home",
+        "original_language": "en",
+        "original_title": "Spider-Man: No Way Home",
+        "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+        "poster_path": "/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "popularity": 878.739,
+        "release_date": "2021-12-15",
+        "video": false,
+        "vote_average": 8.031,
+        "vote_count": 15602
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/u6WzMRpTkGzIlfsPNtDfIBfEy9z.jpg",
+        "id": 848791,
+        "title": "The Stranger",
+        "original_language": "en",
+        "original_title": "The Stranger",
+        "overview": "Two strangers strike up a conversation on a long journey. One is a suspect in an unsolved missing person’s case and the other an undercover operative on his trail. Their uneasy friendship becomes the core of this tightly wrought thriller, which is based on the true story of one of the largest investigations and undercover operations in Australia.",
+        "poster_path": "/ydbm5Ad1nyZq7eywWsw82Wxdsgg.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          80,
+          18,
+          9648,
+          53
+        ],
+        "popularity": 89.886,
+        "release_date": "2022-10-06",
+        "video": false,
+        "vote_average": 6.2,
+        "vote_count": 52
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/xmAqPRZvEDY0NoGmP4SUnn1YARE.jpg",
+        "id": 663712,
+        "title": "Terrifier 2",
+        "original_language": "en",
+        "original_title": "Terrifier 2",
+        "overview": "After being resurrected by a sinister entity, Art the Clown returns to Miles County where he must hunt down and destroy a teenage girl and her younger brother on Halloween night.  As the body count rises, the siblings fight to stay alive while uncovering the true nature of Art's evil intent.",
+        "poster_path": "/ydOS2qCqIdPvYbFuWFq1pfAzYsy.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          27,
+          53
+        ],
+        "popularity": 3300.518,
+        "release_date": "2022-10-06",
+        "video": false,
+        "vote_average": 7.553,
+        "vote_count": 113
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/oxUG1YVKDXz8GqC57LuhZHLVscf.jpg",
+        "id": 949423,
+        "title": "Pearl",
+        "original_language": "en",
+        "original_title": "Pearl",
+        "overview": "Trapped on her family’s isolated farm, Pearl must tend to her ailing father under the bitter and overbearing watch of her devout mother. Lusting for a glamorous life like she’s seen in the movies, Pearl’s ambitions, temptations and repressions collide.",
+        "poster_path": "/ulBLIBqvdnf4H6JBt0OpMCU1ECn.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          27,
+          53,
+          18
+        ],
+        "popularity": 209.372,
+        "release_date": "2022-09-16",
+        "video": false,
+        "vote_average": 7.006,
+        "vote_count": 81
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/mifoXrO18fyEBPYn9UqNduunod9.jpg",
+        "id": 869025,
+        "title": "Raymond & Ray",
+        "original_language": "en",
+        "original_title": "Raymond & Ray",
+        "overview": "Half brothers Raymond and Ray reunite when their estranged father dies—and discover that his final wish was for them to dig his grave. Together, they process who they’ve become as men, both because of their father and in spite of him.",
+        "poster_path": "/fdKZmSQHD17JjGUYkluhpttgJRi.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          18,
+          35
+        ],
+        "popularity": 96.835,
+        "release_date": "2022-10-14",
+        "video": false,
+        "vote_average": 6.951,
+        "vote_count": 41
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/cuAUhb0aYQ9PsdU7EN3L2p1d3Ox.jpg",
+        "id": 864959,
+        "title": "The Curse of Bridge Hollow",
+        "original_language": "en",
+        "original_title": "The Curse of Bridge Hollow",
+        "overview": "A Halloween-hating dad reluctantly teams up with his teenage daughter when an evil spirit wreaks havoc by making their town's decorations come to life.",
+        "poster_path": "/t6P9l6tcVnWLS1ADUAfkUCGQhm0.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          12,
+          35,
+          27,
+          10751
+        ],
+        "popularity": 1007.644,
+        "release_date": "2022-10-14",
+        "video": false,
+        "vote_average": 7.062,
+        "vote_count": 193
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/iS9U3VHpPEjTWnwmW56CrBlpgLj.jpg",
+        "id": 642885,
+        "title": "Hocus Pocus 2",
+        "original_language": "en",
+        "original_title": "Hocus Pocus 2",
+        "overview": "It's been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it's up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow's Eve.",
+        "poster_path": "/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          14,
+          35,
+          10751
+        ],
+        "popularity": 1820.813,
+        "release_date": "2022-09-27",
+        "video": false,
+        "vote_average": 7.629,
+        "vote_count": 883
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/xVbppM1xgbskOKgOuV8fbWBWHtt.jpg",
+        "id": 762504,
+        "title": "Nope",
+        "original_language": "en",
+        "original_title": "Nope",
+        "overview": "Residents in a lonely gulch of inland California bear witness to an uncanny, chilling discovery.",
+        "poster_path": "/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          27,
+          9648,
+          878,
+          53
+        ],
+        "popularity": 421.821,
+        "release_date": "2022-07-20",
+        "video": false,
+        "vote_average": 7.004,
+        "vote_count": 1842
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg",
+        "id": 851644,
+        "title": "20th Century Girl",
+        "original_language": "ko",
+        "original_title": "20세기 소녀",
+        "overview": "Yeon-du asks her best friend Bora to collect all the information she can about Baek Hyun-jin while she is away in the U.S. for heart surgery. Bora decides to get close to Baek's best friend, Pung Woon-ho first. However, Bora's clumsy plan unfolds in an unexpected direction. In 1999, a year before the new century, Bora, who turns seventeen, falls into the fever of first love.",
+        "poster_path": "/od22ftNnyag0TTxcnJhlsu3aLoU.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          10749,
+          18
+        ],
+        "popularity": 59.766,
+        "release_date": "2022-10-06",
+        "video": false,
+        "vote_average": 8.835,
+        "vote_count": 100
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg",
+        "id": 505642,
+        "title": "Black Panther: Wakanda Forever",
+        "original_language": "en",
+        "original_title": "Black Panther: Wakanda Forever",
+        "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+        "poster_path": "/ps2oKfhY6DL3alynlSqY97gHSsg.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "popularity": 369.806,
+        "release_date": "2022-11-09",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0
+      }
+    ],
+    "total_pages": 1000,
+    "total_results": 20000
+  }

@@ -31,6 +31,6 @@ export class DashboardPage implements OnInit {
     this.router.navigate(['/home']);
   }
   search(name) {
-    this.router.navigate(['/search'], name);
+    this.router.navigate([`/search/${name}`], name);
   }
 }

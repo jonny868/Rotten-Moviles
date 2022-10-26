@@ -10,7 +10,7 @@ import { DisplayService } from '../services/display.service';
 })
 export class SearchPage implements OnInit {
   public movies = [];
-  name: string;
+  name: any;
 
   constructor(
     private router: Router,
@@ -20,11 +20,11 @@ export class SearchPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe((params) => (this.name = params.name));
+    this.name = this.route.snapshot.paramMap.get('id');
     console.log(this.name);
-    this.moviesDisplay.getMovieByName(this.name).subscribe((res) => {
-      console.log(res);
+    return this.moviesDisplay.getMovieByName(this.name).subscribe(res=>{
       this.movies = res.results;
+      console.log(this.movies);
     });
   }
 
@@ -33,6 +33,6 @@ export class SearchPage implements OnInit {
     this.router.navigate(['/home']);
   }
   search(name) {
-    this.router.navigate(['/search'], name);
+    this.router.navigate([`/search/${name}`], name);
   }
 }

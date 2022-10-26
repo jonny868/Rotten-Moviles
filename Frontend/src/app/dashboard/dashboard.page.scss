@@ -29,3 +29,15 @@ display: flex;
 ion-input {
     width: 100%;
 }
+
+.searchbar {
+    display: flex;
+    margin: 2rem 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    height: 3rem;
+}
+
+.searchbar button {
+    width: 20%;
+}
