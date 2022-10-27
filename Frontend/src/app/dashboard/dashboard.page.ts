@@ -12,6 +12,7 @@ import { DisplayService } from '../services/display.service';
 export class DashboardPage implements OnInit {
   public movies = [];
   name = '';
+  id = '';
 
   constructor(
     private router: Router,
@@ -32,5 +33,9 @@ export class DashboardPage implements OnInit {
   }
   search(name) {
     this.router.navigate([`/search/${name}`], name);
+  }
+
+  movieRe(id){
+    this.router.navigate([`/movies/${id}`], id);
   }
 }

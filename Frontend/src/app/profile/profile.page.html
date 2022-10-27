@@ -35,7 +35,7 @@
         Profile
       </ion-button>
     </div>
-      <ng-container *ngIf="authService.logged();else logged">
+      <ng-container *ngIf="authService.logged();else notLogged">
         <div class="btn-container">
           <ion-button (click)="logout()" color="dark" expand="block" fill="outline" shape="default">
             <ion-icon slot="start" name="log-out-outline"></ion-icon>
@@ -43,7 +43,7 @@
           </ion-button>
         </div>
       </ng-container>
-      <ng-template #logged>
+      <ng-template #notLogged>
         <div class="btn-container">
           <ion-button (click)="logout()" color="dark" expand="block" fill="outline" shape="default">
             <ion-icon slot="start" name="log-out-outline"></ion-icon>

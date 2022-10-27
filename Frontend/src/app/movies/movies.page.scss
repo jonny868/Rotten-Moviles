@@ -1,0 +1,55 @@
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  flex: 1 1 0%;
+  margin-left: 2rem;
+}
+
+.btn-container {
+  display: flex;
+}
+
+ion-button {
+  width: 100%;
+}
+
+// ion-card img {
+//   height: 14rem;
+//   width: 100%
+// }
+
+ion-card-content {
+display: flex;
+
+}
+.container ion-input {
+  width: 100%;
+}
+
+.searchbar {
+  display: flex;
+  margin: 2rem 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  height: 3rem;
+}
+
+.searchbar button {
+  width: 20%;
+}
+.container {
+  margin: 0 4px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ion-icon {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 8px;
+}
