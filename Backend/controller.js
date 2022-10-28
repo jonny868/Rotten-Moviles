@@ -1,5 +1,6 @@
 const ctrl = {};
 const User = require("../Backend/models/User");
+const Comment = require("../Backend/models/Comment");
 const jwt = require("jsonwebtoken");
 const SECRET_KEY = "osmosisinversa";
 const bcrypt = require("bcrypt");
@@ -18,14 +19,14 @@ ctrl.register = async (req, res) => {
   //Validando que el usuario no esta usado
   if (validateUsername) {
     return res
-    .status(406)
-    .json({ ok: false, msg: "Username already taken, try a different one" });
+      .status(406)
+      .json({ ok: false, msg: "Username already taken, try a different one" });
   }
   //validando que el email no esta usado
   if (validateEmail) {
     return res
-    .status(406)
-    .json({ ok: false, msg: "Email already taken, try a different one" });
+      .status(406)
+      .json({ ok: false, msg: "Email already taken, try a different one" });
   }
   const newUser = new User({ email, password, username });
   await newUser.save();
@@ -97,6 +98,24 @@ ctrl.verifyToken = (req, res, next) => {
   req.userId = data._id;
   next();
   console.log(data);
+};
+
+ctrl.getComments = async (req, res, next) => {
+  try {
+    const comments = await Comment.find()
+    console.log(comments)
+    res.status(200).json(comments)
+  } catch (error) {
+    res.status(500).json({msg: error})
+  }
+};
+
+ctrl.createComment = (req, res, next) => {
+  try {
+    
+  } catch (error) {
+    
+  }
 };
 
 module.exports = ctrl;
