@@ -1,6 +1,6 @@
 const { Router} = require('express')
 const router = Router()
-const {home,register,login, dashboard,profile, verifyToken, createComment, getComments} = require('../controller');
+const {home,register,login, dashboard,profile, verifyToken, createComment, getComments, rateMovie, getRates} = require('../controller');
 
 const User = require('../models/User')
 
@@ -13,5 +13,7 @@ router.get('/dashboard', dashboard)
 router.get('/profile',verifyToken, profile)
 router.post('/comment', createComment)
 router.get('/comments', getComments)
+router.get('/rates', getRates)
+router.post('/rate', rateMovie)
 
 module.exports = router;

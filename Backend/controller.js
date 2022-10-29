@@ -1,6 +1,7 @@
 const ctrl = {};
 const User = require("../Backend/models/User");
 const Comment = require("../Backend/models/Comment");
+const Rate = require("../Backend/models/Rate");
 const jwt = require("jsonwebtoken");
 const SECRET_KEY = "osmosisinversa";
 const bcrypt = require("bcrypt");
@@ -36,14 +37,14 @@ ctrl.register = async (req, res) => {
 
 //login --> completo, falta añadir validaciones
 ctrl.login = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, username } = req.body;
   const user = await User.findOne({ email });
   if (!user) return res.status(401).send("Email or Password Incorrect");
   if (user.password !== password)
     return res.status(401).send("Email or Password Incorrect");
 
   const token = jwt.sign({ _id: user._id }, SECRET_KEY);
-  res.status(200).json({ token });
+  res.status(200).json({ token, user });
 };
 
 ctrl.dashboard = async (req, res) => {
@@ -103,19 +104,45 @@ ctrl.verifyToken = (req, res, next) => {
 ctrl.getComments = async (req, res, next) => {
   try {
     const comments = await Comment.find()
-    console.log(comments)
     res.status(200).json(comments)
   } catch (error) {
-    res.status(500).json({msg: error})
+    res.status(500).json({message: error.message})
   }
 };
 
-ctrl.createComment = (req, res, next) => {
+ctrl.createComment = async (req, res, next) => {
+  console.log(req.body)
+  const commentary = req.body;
+  const newComment = new Comment(commentary)
   try {
-    
+    await  newComment.save()
+
+    res.status(200).json(newComment);
   } catch (error) {
-    
+    res.status(500).json({message:error.message});
   }
 };
+
+ctrl.rateMovie = async (req, res, next) => {
+  console.log(req.body)
+  const rate = req.body
+  const newRate = new Rate(rate)
+  try {
+    await newRate.save()
+    res.status(200).json(newRate);
+  } catch (error) {
+    res.status(500).json({message:error.message});
+  }
+};
+
+ctrl.getRates = async (req,res,next)=>{
+  try {
+    const rates = await Rate.find()
+    res.status(200).json(rates)
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+}
+
 
 module.exports = ctrl;

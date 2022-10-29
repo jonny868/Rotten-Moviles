@@ -13,6 +13,8 @@ export class DashboardPage implements OnInit {
   public movies = [];
   name = '';
   id = '';
+  user;
+  parsedUser: any;
 
   constructor(
     private router: Router,
@@ -21,6 +23,9 @@ export class DashboardPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.user = localStorage.getItem('user');
+    this.parsedUser = JSON.parse(this.user);
+    console.log(this.parsedUser);
     this.moviesDisplay.getMovies().subscribe((res) => {
       console.log(res);
       this.movies = res.results;
@@ -35,7 +40,7 @@ export class DashboardPage implements OnInit {
     this.router.navigate([`/search/${name}`], name);
   }
 
-  movieRe(id){
+  movieRe(id) {
     this.router.navigate([`/movies/${id}`], id);
   }
 }

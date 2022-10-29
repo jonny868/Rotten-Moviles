@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">New Comment</ion-title>
+    <ion-icon (click)="closeModal()" class="ion-padding" slot="end" name="close" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title class="ion-text-center ion-padding ion-margin">{{data.title}}</ion-title>
+  <ion-textarea [(ngModel)]="comment.message" class="ion-padding" autofocus="true" autocapitalize="on" maxlength="200" placeholder="Add a new comment..."></ion-textarea>
+  <ion-button (click)="sendComment()" color="dark" expand="block" fill="outline" shape="default">
+    Confirm
+  </ion-button>
+
+</ion-content>

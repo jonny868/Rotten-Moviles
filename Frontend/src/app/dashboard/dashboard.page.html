@@ -5,7 +5,7 @@
         src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png"
       />
     </ion-avatar>
-    <ion-label class="name">Guest</ion-label>
+    <ion-label class="ion-text-center">{{parsedUser['username']}}</ion-label>
   </ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">Rotten</ion-title>
@@ -111,18 +111,16 @@
         src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}"
       />
       <ion-card-header>
-        <ion-card-title>{{movie.title}}</ion-card-title>
-        <ion-card-subtitle>Suspense</ion-card-subtitle>
+        <ion-card-title class="ion-text-center">{{movie.title}}</ion-card-title>
+        <ion-card-subtitle>{{movie.overview}}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
         <ion-item>
           <ion-icon slot="start" name="star-half-outline"></ion-icon>
-          <ion-label>8.5</ion-label>
         </ion-item>
         <ion-item>
           <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
-          <ion-label>84</ion-label>
         </ion-item>
       </ion-card-content>
     </ion-card>

@@ -2,6 +2,7 @@ const {Schema, model} = require('mongoose');
 
 const CommentSchema = new Schema({
     username: String,
+    userId: String,
     message: String,
     movieId: String,
     createdAt: {

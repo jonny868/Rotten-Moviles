@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'search/:id',
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   },
+  {
+    path: 'comment-modal',
+    loadChildren: () => import('./comment-modal/comment-modal.module').then( m => m.CommentModalPageModule)
+  },
+  {
+    path: 'rate-modal',
+    loadChildren: () => import('./rate-modal/rate-modal.module').then( m => m.RateModalPageModule)
+  },
 ];
 
 @NgModule({

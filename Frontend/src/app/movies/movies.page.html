@@ -5,7 +5,7 @@
         src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png"
       />
     </ion-avatar>
-    <ion-label class="name">Guest</ion-label>
+    <ion-label class="ion-text-center">{{parsedUser['username']}}</ion-label>
   </ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">Rotten</ion-title>
@@ -111,28 +111,31 @@
         <ion-card-title class="ion-text-center ion-padding">{{movie['title']}}</ion-card-title>
         <ion-card-subtitle class="ion-padding">{{movie['overview']}}</ion-card-subtitle>
         <div class="container">
-          <ion-item>
+          <ion-item class="btn" (click)="presentAlert()">
             <ion-icon slot="start" name="star-outline" size="medium" ></ion-icon>
             <ion-label class="ion-text-center">
               <h5>Rating</h5>
-              <p>5/10</p>
+              <p>{{totalRating}}</p>
             </ion-label>
           </ion-item>
-          <ion-item>
+          <ion-item (click)="openCommentModal()">
             <ion-icon slot="start" name="chatbox-outline" ></ion-icon>
             <ion-label class="ion-text-center">
               <h5>Coments</h5>
-              <p>2</p>
+              <p>{{comments.length}}</p>
             </ion-label>
           </ion-item>
         </div>
        
       </ion-card>
       <ion-card>
-        <ion-title class="ion-padding">Comments</ion-title>
-        <ion-card>
-          <ion-card-title class="ion-padding">Username</ion-card-title>
-          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+        <ion-title class="ion-padding ion-text-center">Comments</ion-title>
+        <ion-card *ngFor="let item of comments">
+          <ion-card-title class="ion-padding ion-text-center">{{item['username']}}</ion-card-title>
+          <ion-card-subtitle>{{item['createdAt'] | date: 'short'}}</ion-card-subtitle>
+          <ion-card-content class="ion-padding">
+            {{item['message']}}
+          </ion-card-content>
         </ion-card>
       </ion-card>
     </ng-container>

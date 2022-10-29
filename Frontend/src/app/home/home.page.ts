@@ -15,6 +15,7 @@ export class HomePage {
     email: '',
     password: '',
   };
+  userdata: any;
   constructor(private router: Router, public authService: AuthService, private toastController: ToastController ) {}
   async presentToast() {
     const toast = await this.toastController.create({
@@ -37,6 +38,8 @@ export class HomePage {
       (res) => {
         console.log(res);
         localStorage.setItem('token', res.token);
+        this.userdata = JSON.stringify(res.user);
+        localStorage.setItem('user',this.userdata);
         this.router.navigate(['/dashboard']);
       },
       (err) => {
