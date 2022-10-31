@@ -17,6 +17,11 @@ export class SocialService {
     return this.http.get<any>(this.commentsURL);
   }
 
+  //obtener los comentarios de una pelicula
+  getCommentsByMovie(id: string){
+    return this.http.get<any>(`http://localhost:3000/api/comments/${id}`);
+  }
+
   //publicar un nnuevo comentario
   postComment(comment){
     return this.http.post<any>(this.commentURL,comment);
@@ -26,7 +31,12 @@ export class SocialService {
   rateMovie(rate){
     return this.http.post<any>(this.rateURL,rate);
   }
+
+  //obtener todos los rates
   getRates(){
     return this.http.get<any>(this.ratesURL);
+  }
+  getRatesByMovie(id: string){
+    return this.http.get<any>(`http://localhost:3000/api/rates/${id}`);
   }
 }

@@ -7,12 +7,6 @@ const SECRET_KEY = "osmosisinversa";
 const bcrypt = require("bcrypt");
 const { v4 } = require("uuid");
 
-ctrl.home = (req, res) => {
-  res.send("hey home");
-};
-
-//registro --> completo, falta añadir validaciones y seguridad
-
 ctrl.register = async (req, res) => {
   const { email, password, username } = req.body;
   const validateUsername = await User.findOne({ username: username });
@@ -103,46 +97,74 @@ ctrl.verifyToken = (req, res, next) => {
 
 ctrl.getComments = async (req, res, next) => {
   try {
-    const comments = await Comment.find()
-    res.status(200).json(comments)
+    const comments = await Comment.find();
+    res.status(200).json(comments);
   } catch (error) {
-    res.status(500).json({message: error.message})
+    res.status(500).json({ message: error.message });
   }
 };
 
 ctrl.createComment = async (req, res, next) => {
-  console.log(req.body)
   const commentary = req.body;
-  const newComment = new Comment(commentary)
+  const newComment = new Comment(commentary);
   try {
-    await  newComment.save()
+    await newComment.save();
 
     res.status(200).json(newComment);
   } catch (error) {
-    res.status(500).json({message:error.message});
+    res.status(500).json({ message: error.message });
   }
 };
 
 ctrl.rateMovie = async (req, res, next) => {
-  console.log(req.body)
-  const rate = req.body
-  const newRate = new Rate(rate)
+  const rate = req.body;
+  const newRate = new Rate(rate);
   try {
-    await newRate.save()
+    await newRate.save();
     res.status(200).json(newRate);
   } catch (error) {
-    res.status(500).json({message:error.message});
+    res.status(500).json({ message: error.message });
   }
 };
 
-ctrl.getRates = async (req,res,next)=>{
+ctrl.getRates = async (req, res, next) => {
   try {
-    const rates = await Rate.find()
-    res.status(200).json(rates)
+    const rates = await Rate.find();
+    res.status(200).json(rates);
   } catch (error) {
-    res.status(500).json({message: error.message})
+    res.status(500).json({ message: error.message });
+  }
+};
+
+ctrl.getCommentsByMovie = async (req, res, next) => {
+  const movieId = req.params.id
+  const searchComments = await Comment.find({movieId:movieId});
+  if (searchComments) {
+    res.json({
+      comments: searchComments,
+    });
+  } else {
+    res.status(404).json({
+      message: "Error",
+    });
+  }
+};
+ctrl.getRatesByMovie = async (req, res, next) => {
+  const movieId = req.params.id
+  const searchRates = await Rate.find({movieId:movieId});
+  if (searchRates) {
+    res.json({
+      rates: searchRates,
+    });
+  } else {
+    res.status(404).json({
+      message: "Error",
+    });
   }
 }
 
+ctrl.home = async (req, res, next) => {
+  res.send("Hello world");
+};
 
 module.exports = ctrl;

@@ -21,10 +21,8 @@ export class SearchPage implements OnInit {
 
   ngOnInit() {
     this.name = this.route.snapshot.paramMap.get('id');
-    console.log(this.name);
     return this.moviesDisplay.getMovieByName(this.name).subscribe(res=>{
       this.movies = res.results;
-      console.log(this.movies);
     });
   }
 

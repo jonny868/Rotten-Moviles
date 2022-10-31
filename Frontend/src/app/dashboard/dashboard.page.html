@@ -5,7 +5,12 @@
         src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png"
       />
     </ion-avatar>
-    <ion-label class="ion-text-center">{{parsedUser['username']}}</ion-label>
+    <ng-container *ngIf="parsedUser;else guest">
+      <ion-label class="ion-text-center">{{parsedUser['username']}}</ion-label>
+    </ng-container>
+    <ng-template #guest>
+      <ion-label class="ion-text-center">GUEST</ion-label>
+    </ng-template>
   </ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">Rotten</ion-title>
@@ -87,6 +92,7 @@
           expand="block"
           fill="outline"
           shape="default"
+          [routerLink]="['/home']" routerLinkActive="router-link-active" 
         >
           <ion-icon slot="start" name="log-out-outline"></ion-icon>
           Login
