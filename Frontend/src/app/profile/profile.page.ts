@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,10 +8,14 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+  user;
+  parseDuser;
 
-  constructor(public authService: AuthService ,private router: Router) { }
+  constructor(public authService: AuthService ,private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
   }
   logout(){
     localStorage.clear();

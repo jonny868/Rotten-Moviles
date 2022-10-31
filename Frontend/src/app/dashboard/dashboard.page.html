@@ -60,12 +60,12 @@
       </div>
       <div class="btn-container">
         <ion-button
-          [routerLink]="['/profile']"
           routerLinkActive="router-link-active"
           color="dark"
           expand="block"
           fill="outline"
           shape="default"
+          (click)="navigateToProfile(user)"
         >
           <ion-icon slot="start" name="person-outline"></ion-icon>
           Profile
