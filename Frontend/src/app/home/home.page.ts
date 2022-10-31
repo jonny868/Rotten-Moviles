@@ -33,10 +33,8 @@ export class HomePage {
   }
 
   signin() {
-    console.log(this.user);
     return this.authService.logInUser(this.user).subscribe(
       (res) => {
-        console.log(res);
         localStorage.setItem('token', res.token);
         this.userdata = JSON.stringify(res.user);
         localStorage.setItem('user',this.userdata);

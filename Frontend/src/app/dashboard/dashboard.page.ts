@@ -13,7 +13,7 @@ export class DashboardPage implements OnInit {
   public movies = [];
   name = '';
   id = '';
-  user;
+  user: any = {};
   parsedUser: any;
 
   constructor(
@@ -42,5 +42,9 @@ export class DashboardPage implements OnInit {
 
   movieRe(id) {
     this.router.navigate([`/movies/${id}`], id);
+  }
+  navigateToProfile(parsedUser){
+    // eslint-disable-next-line no-underscore-dangle
+    this.router.navigate([`/profile/${this.parsedUser.username}`], parsedUser);
   }
 }

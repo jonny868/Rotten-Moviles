@@ -25,7 +25,7 @@ const routes: Routes = [
     loadChildren: () => import('./movies/movies.module').then( m => m.MoviesPageModule),
   },
   {
-    path: 'profile',
+    path: 'profile/:id',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule),
     canActivate:[AuthGuard],
   },

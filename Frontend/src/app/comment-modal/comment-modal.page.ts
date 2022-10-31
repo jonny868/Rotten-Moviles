@@ -29,7 +29,7 @@ export class CommentModalPage implements OnInit {
 
   ngOnInit() {
     this.getData();
-    this.getComments();
+    this.getComments(this.comment.movieId);
   }
   getData(){
     console.log(this.data);
@@ -41,9 +41,9 @@ export class CommentModalPage implements OnInit {
     this.comment.movieId = this.data.id;
     console.log(this.userStamp);
   }
-  getComments(){
-   this.commentService.getComments().subscribe(res=>{
-     this.commentRes = res;
+  async getComments(id){
+   this.commentService.getCommentsByMovie(id).subscribe(res=>{
+     this.commentRes = res.comments;
     });
   }
   sendComment() {

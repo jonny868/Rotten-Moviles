@@ -1,4 +1,9 @@
-import { Component, OnInit, ViewChildren } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChildren,
+  ɵɵsetComponentScope,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { DisplayService } from '../services/display.service';
@@ -31,8 +36,9 @@ export class MoviesPage implements OnInit {
     rate: Number,
     movieId: '',
   };
-  obtainedRates: any = [{rate:Number}];
-  totalRating;
+  obtainedRates: any = [{ rate: Number }];
+  totalRating = 0;
+  commentsByMovie;
 
   constructor(
     private social: SocialService,
@@ -59,21 +65,30 @@ export class MoviesPage implements OnInit {
       },
       (err) => console.error(err)
     );
-    this.social.getComments().subscribe(
+    //obtener los comentarios de la
+    this.social.getCommentsByMovie(this.id).subscribe(
       (res) => {
-        this.obtainedComments = res;
+        this.obtainedComments = res.comments;
         this.comments = this.obtainedComments.reverse();
       },
       (err) => console.error(err)
     );
-    this.social.getRates().subscribe((res) => {
-      this.obtainedRates = res;
-      console.log(this.obtainedRates);
+    //obtener todos los comentarios
+    // this.social.getComments().subscribe(
+    //   (res) => {
+    //     this.obtainedComments = res;
+    //     this.comments = this.obtainedComments.reverse();
+    //   },
+    //   (err) => console.error(err)
+    // );
+    await this.social.getRatesByMovie(this.id).subscribe((res) => {
+      this.obtainedRates = res.rates;
       for (const rates of this.obtainedRates) {
-        this.totalRating = rates.rates+this.totalRating;
-        console.log(this.totalRating);
-        //quede en la suma del rating para calcular el rating total.
+        if (rates.rate !== undefined) {
+          this.totalRating += rates.rate;
+        }
       }
+      this.totalRating = this.totalRating / this.obtainedRates.length;
     });
   }
   async presentToast() {
@@ -106,15 +121,15 @@ export class MoviesPage implements OnInit {
             this.rate.rate = alertData;
             this.rate.movieId = this.id;
             this.social.rateMovie(this.rate).subscribe((res) => {
-              console.log(res);
             });
-            this.social.getRates().subscribe((res) => {
-              this.obtainedRates = res;
-              console.log(this.obtainedRates);
-              for (const rate of this.obtainedRates) {
-                this.totalRating += this.obtainedRates[rate];
+            this.social.getRatesByMovie(this.id).subscribe((res) => {
+              this.obtainedRates = res.rates;
+              for (const rates of this.obtainedRates) {
+                if (rates.rate !== undefined || 0) {
+                  this.totalRating += rates.rate;
+                }
               }
-              console.log(this.totalRating);
+              this.totalRating = this.totalRating / this.obtainedRates.length;
             });
           },
         },
@@ -150,7 +165,9 @@ export class MoviesPage implements OnInit {
 
     await alert.present();
   }
-
+  navigateToDB(){
+    this.router.navigate([`/dashboard`]);
+  }
   logout() {
     localStorage.clear();
     this.router.navigate(['/home']);
@@ -163,7 +180,6 @@ export class MoviesPage implements OnInit {
       (res) => {
         this.obtainedComments = res;
         this.comments = this.obtainedComments.reverse();
-        console.log(this.comments);
       },
       (err) => console.error(err)
     );
@@ -186,7 +202,6 @@ export class MoviesPage implements OnInit {
     });
     await modal.present();
     const { data: commentRes, role } = await modal.onWillDismiss();
-    console.log(commentRes);
     if (role === 'Submitted') {
       this.comments = commentRes.reverse();
     }
