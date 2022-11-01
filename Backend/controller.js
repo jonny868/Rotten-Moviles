@@ -2,6 +2,7 @@ const ctrl = {};
 const User = require("../Backend/models/User");
 const Comment = require("../Backend/models/Comment");
 const Rate = require("../Backend/models/Rate");
+const Profile = require("../Backend/models/Profile");
 const jwt = require("jsonwebtoken");
 const SECRET_KEY = "osmosisinversa";
 const bcrypt = require("bcrypt");
@@ -160,6 +161,31 @@ ctrl.getRatesByMovie = async (req, res, next) => {
     res.status(404).json({
       message: "Error",
     });
+  }
+}
+
+//AÑADIR UNA PELICULA A FAVORITOS
+ctrl.Favorite = async (req, res, next) => {
+  const {movieId,movie} = req.params
+};
+
+//OBTENER EL PERFIL DE UN USUARIO
+ctrl.getProfile = async (req, res, next) => {
+  const {username} = req.params.username;
+  const searchProfile = await Profile.find({username: username});
+  const searchRates = await Rates.find({username: username});
+  const searchComments = await Comment.find({username: username});
+  const searchFavorites = await Favorites.find({username: username});
+  if(searchProfile){
+    const {rates} = searchRates
+    const comments = searchComments
+    res.json({
+      profile: searchProfile,
+      comments: searchComments,
+      rates:searchRates,
+      favorites: searchFavorites
+      
+    })
   }
 }
 

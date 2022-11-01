@@ -39,4 +39,8 @@ export class SocialService {
   getRatesByMovie(id: string){
     return this.http.get<any>(`http://localhost:3000/api/rates/${id}`);
   }
+
+  getProfile(id: string){
+    return this.http.get<any>(`http://localhost:3000/profile/${id}`);
+  }
 }

@@ -33,4 +33,7 @@ export class SearchPage implements OnInit {
   search(name) {
     this.router.navigate([`/search/${name}`], name);
   }
+  movieRe(id) {
+    this.router.navigate([`/movies/${id}`], id);
+  }
 }

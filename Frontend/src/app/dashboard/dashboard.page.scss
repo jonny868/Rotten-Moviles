@@ -18,9 +18,11 @@ ion-button {
 }
 
 
-ion-card-content {
-display: flex;
 
+ion-card-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 ion-input {
     width: 100%;
